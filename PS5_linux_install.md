@@ -11,7 +11,8 @@ Read this page and configure the PS5 settings:
 
 ## 1. Download the Linux ISO
 
-Attempting to build it myself failed. Apparently that's better to do though. Go to this location and download the latest release image:
+Attempting to build it myself failed. Apparently that's better to do though. From a discord quote on their official page, to fix the issue I was having "i went and messed with the max memory allocation in wls so i figured it out thank god", so this might fix it
+Go to this location and download the latest release image as the alternative:
 https://github.com/ps5-linux/ps5-linux-image/releases/tag/latest
 
 ## 2. Windows (Balena Etcher)
