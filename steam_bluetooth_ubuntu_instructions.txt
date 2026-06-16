@@ -1,0 +1,47 @@
+
+
+I seemed to have issues on ubuntu with the bluetooth controller connecting to Elden Ring. To fix this,
+
+I tried a lot of different things. I first went to the steam website and downloaded steam which gave me the
+initial issue. Then I tried using antimicrox which did not seem to work at all, but I left it on my machine.
+
+I set the default Controller profile to the normal Gamepad profile.
+
+I then attempted to setup antimicroX and run a debugging step which indicated that I should do the stuff
+found on this site: https://github.com/AntiMicroX/antimicrox/wiki/Open-uinput-error
+
+cd /usr/lib/udev/rules.d/
+sudo wget https://raw.githubusercontent.com/AntiMicroX/antimicrox/master/other/60-antimicrox-uinput.rules
+
+I also tried explicitly trusting the bluetooth controller with the command bluetoothctl. I got the idea
+from this forum:
+https://forums.linuxmint.com/viewtopic.php?t=427054
+that points to this forum:
+https://github.com/bluez/bluez/issues/673
+that says:
+Disconnect your gamepad with blueman and remove the device
+bluetoothctl
+scan on and wait a second
+devices and copy the MAC of the device that you want to pair
+pair MAC_ADDRESS
+connect MAC_ADDRESS
+trust MAC_ADDRESS
+
+
+Then, I googled the issue and google AI said to try the following:
+
+sudo apt install steam-devices -y
+ sudo usermod -aG input $USER
+
+I also ran this command which I do not know what that did.
+sudo apt install steam -y
+
+But this removes the steam-link so it is difficult to find and start steam. So, I was able to go to the 
+app manager somehow and attempted to uninstall all that. 
+Then I went to the resources manager and ensured steam was not running in the background.
+
+Then I re-ran the steam_latest.deb and reconnected my dualshock 5 with bluetooth. And it was able to 
+connect with steam, and was working with Elden Ring.
+
+After all of this, I got an unsatisfactory ending where I am not sure what caused Steam to start 
+functioning properly.
