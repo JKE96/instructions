@@ -13,6 +13,10 @@ found on this site: https://github.com/AntiMicroX/antimicrox/wiki/Open-uinput-er
 cd /usr/lib/udev/rules.d/
 sudo wget https://raw.githubusercontent.com/AntiMicroX/antimicrox/master/other/60-antimicrox-uinput.rules
 
+I also tried different installations for antimicrox, I am on ubuntu 26 but I installed for ubuntu24 
+with no luck so I uninstalled it after and left the original. I do not think this effected 
+things but I want to list that as something I did
+
 I also tried explicitly trusting the bluetooth controller with the command bluetoothctl. I got the idea
 from this forum:
 https://forums.linuxmint.com/viewtopic.php?t=427054
